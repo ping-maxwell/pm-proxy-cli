@@ -8,12 +8,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 function detectPackageManager(cwd: string): string {
-  if (existsSync(join(cwd, "pnpm-lock.yaml"))) return "pnpm";
-  if (existsSync(join(cwd, "bun.lockb"))) return "bun";
-  if (existsSync(join(cwd, "bun.lock"))) return "bun";
-  if (existsSync(join(cwd, "yarn.lock"))) return "yarn";
-  if (existsSync(join(cwd, "package-lock.json"))) return "npm";
-
   const pkgJsonPath = join(cwd, "package.json");
   if (existsSync(pkgJsonPath)) {
     try {
@@ -23,6 +17,12 @@ function detectPackageManager(cwd: string): string {
       }
     } catch {}
   }
+
+  if (existsSync(join(cwd, "bun.lockb"))) return "bun";
+  if (existsSync(join(cwd, "bun.lock"))) return "bun";
+  if (existsSync(join(cwd, "pnpm-lock.yaml"))) return "pnpm";
+  if (existsSync(join(cwd, "yarn.lock"))) return "yarn";
+  if (existsSync(join(cwd, "package-lock.json"))) return "npm";
 
   return "npm"; // fallback
 }

@@ -60,3 +60,22 @@ will become:
 ```bash
 pnpm -F docs dev --port 3001
 ```
+
+### Basic Info
+
+If you just want basic info such as all of your active aliases or the current projects package manager, you can just run:
+
+```bash
+pm
+```
+
+Which will return something like this:
+
+```
+Package Manager: bun
+┌─────────┬───────────────────────────┐
+│ (index) │ Values                    │
+├─────────┼───────────────────────────┤
+│ ba:docs │ '-F docs dev --port 3001' │
+└─────────┴───────────────────────────┘
+```
