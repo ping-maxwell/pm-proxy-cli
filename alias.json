@@ -1,3 +1,5 @@
 {
-    "ba:docs": "-F docs dev --port 3001"
+    "ba:docs": "-F docs dev --port 3001",
+    "ba:test": "-F better-auth test",
+    "ba:build": "-F better-auth build"
 }

@@ -53,7 +53,7 @@ function run() {
     let finalArgs;
     if (aliases[args[0]]) {
         const aliasArgs = aliases[args[0]].trim().split(/\s+/);
-        finalArgs = ["run", ...aliasArgs];
+        finalArgs = ["run", ...aliasArgs, ...args.slice(1)];
     }
     else if (args[0] === "i" || args[0] === "install") {
         finalArgs = ["install"];
