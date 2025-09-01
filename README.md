@@ -8,7 +8,7 @@ Note: This was made for my personal use, but should work for others too :)
 
 1. Clone this repo
 2. Install dependencies
-3. Run the build script (`tsc`) 
+3. Run the build script (it's just `tsc`) `npm run build` or `bun run build` or `yarn run build` or `pnpm run build` or `pm build` 😉
 4. Link the project, `npm link` does the job.
 
 That's it!
