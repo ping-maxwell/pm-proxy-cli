@@ -26,7 +26,7 @@ pm i better-auth
 
 ### Run scripts
 
-Passing any argument that isn't an [alias](#alias) or install command will automatically be treated as a script to be ran,
+Passing any argument that isn't an [alias](#custom-alias-scripts) or install command will automatically be treated as a script to be ran,
 this will always be called with `<pm> run <arguments>`
 
 ```bash

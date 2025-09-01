@@ -2,7 +2,20 @@
 	"name": "pm-proxy-cli",
 	"module": "./src/index.js",
 	"type": "module",
-	"private": true,
+	"license": "MIT",
+	"author": "Maxwell Chen",
+	"homepage": "https://github.com/ping-maxwell/pm-proxy-cli",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ping-maxwell/pm-proxy-cli"
+	},
+	"keywords": [
+		"cli",
+		"package manager",
+		"proxy",
+		"alias"
+	],
+	"description": "A CLI that automatically detects the package manager (pnpm, bun, npm, yarn, etc.) based on the current directory, and then forwards all CLI args to that package manager.",
 	"bin": {
 		"pm": "dist/index.js"
 	},
