@@ -1,0 +1,19 @@
+{
+	"name": "pm-proxy-cli",
+	"module": "./src/index.js",
+	"type": "module",
+	"private": true,
+	"bin": {
+		"pm": "dist/index.js"
+	},
+	"scripts": {
+		"build": "tsc",
+    "start": "bun run src/index.ts"
+	},
+	"devDependencies": {
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	}
+}
