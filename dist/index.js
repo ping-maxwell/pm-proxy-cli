@@ -56,7 +56,7 @@ function run() {
         finalArgs = ["run", ...aliasArgs, ...args.slice(1)];
     }
     else if (args[0] === "i" || args[0] === "install") {
-        finalArgs = ["install"];
+        finalArgs = ["install", ...args.slice(1)];
     }
     else {
         finalArgs = ["run", args[0], ...args.slice(1)];
