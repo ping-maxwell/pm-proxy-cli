@@ -1,14 +1,14 @@
 {
-  "name": "pm-proxy-cli",
+  "name": "package-manager-proxy",
   "version": "1.0.0",
   "module": "./src/index.js",
   "type": "module",
   "license": "MIT",
   "author": "Maxwell Chen",
-  "homepage": "https://github.com/ping-maxwell/pm-proxy-cli",
+  "homepage": "https://github.com/ping-maxwell/package-manager-proxy",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ping-maxwell/pm-proxy-cli"
+    "url": "https://github.com/ping-maxwell/package-manager-proxy"
   },
   "keywords": [
     "cli",

@@ -1,4 +1,4 @@
-# pm-proxy-cli
+# package-manager-proxy
 
 A TypeScript CLI that automatically detects the package manager (pnpm, bun, npm, yarn, etc.) based on the current directory, and then forwards all CLI args to that package manager.
 
