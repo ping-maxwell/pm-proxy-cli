@@ -1,5 +1,6 @@
 {
 	"name": "pm-proxy-cli",
+	"version": "1.0.0",
 	"module": "./src/index.js",
 	"type": "module",
 	"license": "MIT",
