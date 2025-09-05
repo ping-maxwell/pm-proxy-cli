@@ -1,33 +1,33 @@
 {
-	"name": "pm-proxy-cli",
-	"version": "1.0.0",
-	"module": "./src/index.js",
-	"type": "module",
-	"license": "MIT",
-	"author": "Maxwell Chen",
-	"homepage": "https://github.com/ping-maxwell/pm-proxy-cli",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/ping-maxwell/pm-proxy-cli"
-	},
-	"keywords": [
-		"cli",
-		"package manager",
-		"proxy",
-		"alias"
-	],
-	"description": "A CLI that automatically detects the package manager (pnpm, bun, npm, yarn, etc.) based on the current directory, and then forwards all CLI args to that package manager.",
-	"bin": {
-		"pm": "dist/index.js"
-	},
-	"scripts": {
-		"build": "tsc",
+  "name": "pm-proxy-cli",
+  "version": "1.0.0",
+  "module": "./src/index.js",
+  "type": "module",
+  "license": "MIT",
+  "author": "Maxwell Chen",
+  "homepage": "https://github.com/ping-maxwell/pm-proxy-cli",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ping-maxwell/pm-proxy-cli"
+  },
+  "keywords": [
+    "cli",
+    "package manager",
+    "proxy",
+    "alias"
+  ],
+  "description": "A CLI that automatically detects the package manager (pnpm, bun, npm, yarn, etc.) based on the current directory, and then forwards all CLI args to that package manager.",
+  "bin": {
+    "pm": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
     "start": "bun run src/index.ts"
-	},
-	"devDependencies": {
-		"@types/bun": "latest"
-	},
-	"peerDependencies": {
-		"typescript": "^5"
-	}
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
 }
