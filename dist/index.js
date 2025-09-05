@@ -40,11 +40,45 @@ function loadAliases() {
     }
     return {};
 }
+function showHelp() {
+    console.log(`
+Usage: pm [command] [args]
+
+Commands:
+  i, install        Install dependencies
+  <alias>           Runs the command mapped in alias.json
+  <script>          Runs the package.json script
+
+Options:
+  -h, --help        Show this help message
+  -v, --version     Show CLI version
+`);
+}
+function showVersion() {
+    const pkgJsonPath = join(__dirname, "..", "package.json");
+    if (existsSync(pkgJsonPath)) {
+        try {
+            const pkg = JSON.parse(readFileSync(pkgJsonPath, "utf-8"));
+            console.log(`V${pkg.version ?? "unknown"}`);
+        }
+        catch {
+            console.log("Vunknown");
+        }
+    }
+}
 function run() {
     const cwd = process.cwd();
     const pm = detectPackageManager(cwd);
     const aliases = loadAliases();
     const args = process.argv.slice(2);
+    if (args[0] === "--help" || args[0] === "-h") {
+        showHelp();
+        process.exit(0);
+    }
+    if (args[0] === "--version" || args[0] === "-v") {
+        showVersion();
+        process.exit(0);
+    }
     if (args.length === 0) {
         console.log(`Package Manager: ${pm}`);
         console.table(aliases);
